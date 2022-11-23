@@ -10,8 +10,6 @@ def capacitancia(Q, V):
 def coulomb_carga(e):
 	return e * (1 / (6.242 * 10 ** -18))
 
-print(coulomb_carga(82.4*10**-14))
-
 def capacitancia_série(list_cap = []): # recebe uma lista de capacitores e retorna o resultado em paralelo. ex: [10,20,30,40]
 	cap_cumulative = 0
 	for c in list_cap:
@@ -39,8 +37,8 @@ def carga_em_funcao_do_tempo_plotagem (vc, tau, t): # plota o grafico da voltage
 		y.append(v_t)
 	#plotagem
 	plt.plot(x, y, alpha = 0.6, color = 'black', linestyle = 'dotted')
-	plt.xlabel('\u03C4')
-	plt.ylabel('Voltage')
+	plt.xlabel('t * \u03C4')
+	plt.ylabel('Voltagem')
 	plt.show()
 
 def carga_em_funcao_do_tempo (vc, tau, t): # retorna uma lista com a voltagem vc em funcao do tempo

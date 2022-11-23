@@ -42,7 +42,7 @@ def codigo_de_cores(primeiro, segundo, multiplicador, tolerancia):
 
 	valor = int(primeiro + segundo) * multiplicador
 	tol_pos, tol_neg = valor + valor*(tolerancia/100), valor - valor*(tolerancia/100)
-	print(f'tolerância de {tolerancia}% de : {tol_pos} \u03BCH até {tol_neg} \u03BCH ')
+	print(f'indutor de {valor} \u03BCH com tolerância de {tolerancia}% de : {tol_pos} \u03BCH até {tol_neg} \u03BCH ')
 	return valor
 
 # faz a plotagem da corrente em relação o tempo e monta um grafico
@@ -56,7 +56,7 @@ def resposta_transitoria_corrente_plotagem(E, R, tau, t):
 		y.append(i_t)
 	plt.plot(x, y, alpha = 0.6, color = 'black', linestyle = 'dotted')
 	plt.ylabel('Ampères')
-	plt.xlabel('\u03C4')
+	plt.xlabel('t * \u03C4')
 	plt.show()
 
 # corrente máxima ou de estado estacionário
@@ -110,5 +110,3 @@ def indutancia_paralelo(n=[]):
 def energia_armazenada(L, I):
 	W = 1/2 * L * I **2
 	return W
-
-print(indutancia_paralelo([10]))

@@ -18,3 +18,7 @@ E = 50
 R = 2000
 tau = 0.002
 indutor.resposta_transitoria_corrente_plotagem(E, R, tau, t)
+
+# código de cores
+valor_cores = indutor.codigo_de_cores('vermelho', 'violeta', 'marrom', 'ouro')
+print(valor_cores)
