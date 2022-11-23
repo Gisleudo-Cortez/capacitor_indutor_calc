@@ -42,7 +42,7 @@ def codigo_de_cores(primeiro, segundo, multiplicador, tolerancia):
 
 	valor = int(primeiro + segundo) * multiplicador
 	tol_pos, tol_neg = valor + valor*(tolerancia/100), valor - valor*(tolerancia/100)
-	print(f'indutor de {valor} \u03BCH com tolerância de {tolerancia}% de : {tol_pos} \u03BCH até {tol_neg} \u03BCH ')
+	print(f'indutor de {valor} \u03BCH com tolerância de {tolerancia}% de : {tol_neg} \u03BCH até {tol_pos} \u03BCH ')
 	return valor
 
 # faz a plotagem da corrente em relação o tempo e monta um grafico
